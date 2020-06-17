@@ -11,7 +11,5 @@ func main() {
 // a given source cell to a destination cell according
 // to A* Search Algorithm
 func aStarSearch() {
-	// Grid,
-	// source
-	// destination.
+
 }
