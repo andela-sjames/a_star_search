@@ -36,4 +36,4 @@
      end (for loop)
   
     e) push q on the closed list
-    end (while loop) 
+    end (while loop)
