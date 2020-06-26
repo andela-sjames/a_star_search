@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	utils "github.com/andela-sjames/a_star_search/utils"
+)
 
 // A function to find the shortest path between
 // a given source cell to a destination cell according
@@ -12,4 +16,7 @@ func aStarSearch() {
 // A * search
 func main() {
 	fmt.Println("Let the fun begin")
+	nodezero := utils.NewList("nodezero")
+
+	fmt.Println(nodezero)
 }
