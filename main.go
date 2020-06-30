@@ -26,3 +26,6 @@ func main() {
 
 	fmt.Println(nodefour)
 }
+
+
+func a_start_search
