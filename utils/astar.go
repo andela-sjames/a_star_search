@@ -1,15 +1,14 @@
 package utils
 
 import (
+	"fmt"
 	"math"
 
 	pqueue "github.com/andela-sjames/priorityQueue"
 )
 
-/**
-
-**/
-func aStarSearch(g adjList, n int, s int, e int) ([]int, []int) {
+// AStarSearch defined
+func AStarSearch(g adjList, n int, s int, e int) ([]int, []int) {
 	// g - adjacency list of a weighted graph
 	// n - the number of nodes in the graph
 	// s - the index of the starting node ( 0 <= s < n )
@@ -37,6 +36,8 @@ func aStarSearch(g adjList, n int, s int, e int) ([]int, []int) {
 	})
 
 	minheap.InsertPriority(string(s), 0)
+
+	fmt.Println(minheap.ShowHashTable())
 
 	return distance, previous
 }

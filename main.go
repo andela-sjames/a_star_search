@@ -25,7 +25,14 @@ func main() {
 	nodefour := utils.NewList("nodefour", 0)
 
 	fmt.Println(nodefour)
+	adjlist := []*utils.LinkedList{nodezero, nodeone, nodetwo, nodethree, nodefour}
+
+	n := len(adjlist)
+	s := 0
+	e := 4
+
+	dist, path := utils.AStarSearch(adjlist, n, s, e)
+
+	fmt.Println("Distance array: ", dist)
+	fmt.Println("Shortest Path: ", path)
 }
-
-
-func a_start_search
