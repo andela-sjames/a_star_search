@@ -3,6 +3,7 @@ package utils
 import (
 	"fmt"
 	"math"
+	"strconv"
 
 	pqueue "github.com/andela-sjames/priorityQueue"
 )
@@ -38,6 +39,11 @@ func AStarSearch(g adjList, n int, s int, e int) ([]int, []int) {
 	minheap.InsertPriority(string(s), 0)
 
 	fmt.Println(minheap.ShowHashTable())
+
+	for minheap.Length() != 0 {
+		stringAtIndex, min := minheap.Poll()
+		integerAtIndex, _ := strconv.Atoi(stringAtIndex)
+	}
 
 	return distance, previous
 }
