@@ -41,8 +41,46 @@ func AStarSearch(g adjList, n int, s int, e int) ([]int, []int) {
 	fmt.Println(minheap.ShowHashTable())
 
 	for minheap.Length() != 0 {
+
 		stringAtIndex, min := minheap.Poll()
 		integerAtIndex, _ := strconv.Atoi(stringAtIndex)
+
+		// current node is integerAtIndex
+		visited[integerAtIndex] = true
+
+		// optimization to ignore stale index
+		// (index, min_dis) pair
+		if distance[integerAtIndex] < min {
+			continue
+		}
+
+		// loop through all the neighbours of
+		// the current node
+		cn := g[integerAtIndex].head
+		for cn != nil {
+
+			if visited[cn.vertex] {
+				continue
+			}
+
+			newdist := distance[integerAtIndex] + cn.weight
+			if newdist < distance[cn.vertex] {
+				previous[cn.vertex] = integerAtIndex
+				distance[cn.vertex] = newdist
+				minheap.InsertPriority(strconv.Itoa(cn.vertex), newdist)
+			}
+
+			if cn.next == nil {
+				break
+			}
+			cn = cn.next
+		}
+
+		// Optimise here to stop early.
+		if integerAtIndex == e {
+			return distance, previous
+		}
+
 	}
 
 	return distance, previous
