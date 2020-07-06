@@ -33,6 +33,4 @@ func main() {
 
 	dist, path := utils.AStarSearch(adjlist, n, s, e)
 
-	fmt.Println("Distance array: ", dist)
-	fmt.Println("Shortest Path: ", path)
 }
