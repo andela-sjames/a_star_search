@@ -31,6 +31,6 @@ func main() {
 	s := 0
 	e := 4
 
-	dist, path := utils.AStarSearch(adjlist, n, s, e)
+	dist, path := utils.FindShortestPath(adjlist, n, s, e)
 
 }

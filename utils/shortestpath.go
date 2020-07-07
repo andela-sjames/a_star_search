@@ -19,7 +19,7 @@ func reverseSlice(a []int) []int {
 // s - the index of the starting node ( 0 <= s < n )
 // e - the index of the end node (0 <= e < n )
 func FindShortestPath(g adjList, n int, s int, e int) ([]int, []int) {
-	dist, prev := dijstra(g, n, s, e)
+	dist, prev := AStarSearch(g, n, s, e)
 	path := make([]int, 0)
 
 	if dist[e] == math.MaxInt64 {
