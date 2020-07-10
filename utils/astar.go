@@ -40,6 +40,7 @@ func AStarSearch(g adjList, n int, s int, e int) ([]int, []int) {
 
 	fmt.Println(minheap.ShowHashTable())
 
+	// modify from here...
 	for minheap.Length() != 0 {
 
 		stringAtIndex, min := minheap.Poll()
