@@ -32,5 +32,5 @@ func FindShortestPath(g adjList, n int, s int, e int) ([]int, []int) {
 	}
 	shortestPath := reverseSlice(path)
 
-	// return dist, shortestPath
+	return dist, shortestPath
 }
