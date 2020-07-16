@@ -58,7 +58,6 @@ func AStarSearch(g adjList, n int, s int, e int) ([]int, []int) {
 		cn := g[integerAtIndex].head
 
 		// euclideanHeuristic == eH
-		// eH := g[integerAtIndex].heuristics
 
 		for cn != nil {
 
@@ -66,7 +65,7 @@ func AStarSearch(g adjList, n int, s int, e int) ([]int, []int) {
 				continue
 			}
 
-			newdist := distance[integerAtIndex] + cn.weight // caculate new distance here
+			newdist := distance[integerAtIndex] + cn.weight + cn.heuristics
 			if newdist < distance[cn.vertex] {
 				previous[cn.vertex] = integerAtIndex
 				distance[cn.vertex] = newdist
