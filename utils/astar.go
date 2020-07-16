@@ -1,7 +1,6 @@
 package utils
 
 import (
-	"fmt"
 	"math"
 	"strconv"
 
@@ -36,10 +35,11 @@ func AStarSearch(g adjList, n int, s int, e int) ([]int, []int) {
 		Min: true,
 	})
 
+	// start the queue here.
 	minheap.InsertPriority(string(s), 0)
 
 	for minheap.Length() != 0 {
-		fmt.Println(minheap.ShowHashTable())
+		// fmt.Println(minheap.ShowHashTable())
 
 		stringAtIndex, min := minheap.Poll()
 		integerAtIndex, _ := strconv.Atoi(stringAtIndex)
@@ -56,6 +56,10 @@ func AStarSearch(g adjList, n int, s int, e int) ([]int, []int) {
 		// loop through all the neighbours of
 		// the current node
 		cn := g[integerAtIndex].head
+
+		// euclideanHeuristic == eH
+		eH := g[integerAtIndex].heuristics
+
 		for cn != nil {
 
 			if visited[cn.vertex] {
