@@ -9,18 +9,18 @@ import (
 // A * search
 func main() {
 	nodezero := utils.NewList("nodezero", 8)
-	nodezero.AddNode(1, 4)
-	nodezero.AddNode(2, 1)
+	nodezero.AddNode(1, 4, 4)
+	nodezero.AddNode(2, 1, 7)
 
 	nodeone := utils.NewList("nodeone", 4)
-	nodeone.AddNode(3, 1)
+	nodeone.AddNode(3, 1, 2)
 
 	nodetwo := utils.NewList("nodetwo", 7)
-	nodetwo.AddNode(1, 2)
-	nodetwo.AddNode(3, 5)
+	nodetwo.AddNode(1, 2, 4)
+	nodetwo.AddNode(3, 5, 2)
 
 	nodethree := utils.NewList("nodethree", 2)
-	nodethree.AddNode(4, 3)
+	nodethree.AddNode(4, 3, 0)
 
 	nodefour := utils.NewList("nodefour", 0)
 

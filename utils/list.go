@@ -5,6 +5,7 @@ type adjList []*LinkedList
 type node struct {
 	vertex int
 	weight int
+	heuristics int
 	next   *node
 }
 
@@ -16,7 +17,7 @@ type LinkedList struct {
 }
 
 // AddNode adds a node to the linked list data structure.
-func (l *LinkedList) AddNode(vertex, weight int) {
+func (l *LinkedList) AddNode(vertex, weight, heuristics int) {
 	n := &node{
 		vertex: vertex,
 		weight: weight,
