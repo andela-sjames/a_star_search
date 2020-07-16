@@ -57,14 +57,14 @@ func AStarSearch(g adjList, n int, s int, e int) ([]int, []int) {
 		// the current node
 		cn := g[integerAtIndex].head
 
-		// euclideanHeuristic == eH
-
 		for cn != nil {
 
 			if visited[cn.vertex] {
 				continue
 			}
 
+			// Adding this heuristic property extends the dijstra
+			// to become the A star search.
 			newdist := distance[integerAtIndex] + cn.weight + cn.heuristics
 			if newdist < distance[cn.vertex] {
 				previous[cn.vertex] = integerAtIndex
