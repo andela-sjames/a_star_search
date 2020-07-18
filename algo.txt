@@ -1,1 +1,4 @@
 // A* Search Algorithm
+<http://theory.stanford.edu/~amitp/GameProgramming/AStarComparison.html>
+
+<https://www.geeksforgeeks.org/a-search-algorithm/>
