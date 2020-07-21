@@ -24,7 +24,6 @@ func main() {
 
 	nodefour := utils.NewList("nodefour", 0)
 
-	fmt.Println(nodefour)
 	adjlist := []*utils.LinkedList{nodezero, nodeone, nodetwo, nodethree, nodefour}
 
 	n := len(adjlist)
